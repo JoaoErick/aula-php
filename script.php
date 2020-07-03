@@ -13,6 +13,23 @@ $idade = $_POST['idade'];
 //var_dump($nome); //Informa o tipo de dado.
 //var_dump($idade);
 
+if(empty($nome)){
+    echo 'O nome não pode ser vazio';
+    return;
+}
+if (strlen($nome) < 3){
+    echo 'O nome deve conter mais de 3 caracteres';
+    return;
+}
+if (strlen($nome) > 40){
+    echo 'O nome é muito extenso';
+    return;
+}
+if (!is_numeric($idade)){
+    echo 'Informe um número para a idade';
+    return;
+}
+
 
 if($idade >= 6 && $idade <= 12){
     for($i = 0; $i < count($categorias); $i++){
