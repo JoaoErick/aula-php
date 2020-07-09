@@ -16,10 +16,11 @@ function validaNome(string $nome) : bool{
     return true;
 }
 
-function validaIdade(string $idade){
+function validaIdade(string $idade) : bool {
     if (!is_numeric($idade)){
         $_SESSION['mensagem-de-erro'] = 'Informe um número para idade';
         return false;
     }
+    return true;
 }
 
